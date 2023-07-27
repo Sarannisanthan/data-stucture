@@ -1,0 +1,24 @@
+Algorithm to insert node at the middle of Singly Linked List
+%% Input : n position to insert data in the list
+Begin:
+    createSinglyLinkedList (head)
+    alloc (newNode)
+    If (newNode == NULL) then
+        write ('Unable to allocate memory.')
+    End if
+    Else then
+        read (data)
+        newNode.data ← data
+        temp ← head
+        For i ← 2 to n-1
+            temp ← temp.next
+            If (temp == NULL) then
+                break
+            End if
+        End for
+        If (temp != NULL) then
+            newNode.next ← temp.next
+            temp.next ← newNode
+        End if
+    End else
+End
